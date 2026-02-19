@@ -1,3 +1,4 @@
+# Yarn zero-install support (keep selected folders)
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
@@ -5,13 +6,86 @@
 !.yarn/sdks
 !.yarn/versions
 
-# Whether you use PnP or not, the node_modules folder is often used to store
-# build artifacts that should be gitignored
-node_modules
-
-# Swap the comments on the following lines if you wish to use zero-installs
-# In that case, don't forget to run `yarn config set enableGlobalCache false`!
-# Documentation here: https://yarnpkg.com/features/caching#zero-installs
-
-#!.yarn/cache
+# PnP files (if used)
 .pnp.*
+.pnp.js
+
+# Node / JS
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+*.tgz
+
+# Next.js / build outputs
+.next/
+out/
+dist/
+build/
+.cache/
+.nyc_output/
+*.log
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment and secrets
+.env
+.env.*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.backup
+
+# Editor / OS
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+.DS_Store
+Thumbs.db
+
+# Tests / coverage
+coverage/
+.coverage/
+.vitest/
+jest-results.*.json
+test-results/
+
+# Python (services/)
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+ENV/
+env/
+pip-wheel-metadata/
+__pypackages__/
+
+# Docker / container artifacts
+docker-compose.override.yml
+*.stackdump
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.old
+
+# Misc caches
+.cache/
+eslintcache
+parcel-cache/
+yarn-error.log
+
+# Keep track of local machine/project specific files
+local.properties
+.idea/
+.history/
