@@ -21,6 +21,7 @@ pnpm-lock.yaml
 *.tgz
 
 # Next.js / build outputs
+./apps/web/.next/
 .next/
 out/
 dist/
